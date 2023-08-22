@@ -2,8 +2,8 @@ import axiosInst from '@/utility/axiosInst'
 
 export default {
     requestSignUpToSpring(context, payload) {
-        const {userId, userPw} = payload
-        return axiosInst.post('/', {userId, userPw})
+        const {userId, userPw, tel} = payload
+        return axiosInst.post('/member/sign-up', {userId, userPw, tel})
         .then(() => {alert("성공")})
         .catch(() => alert("실패"))
     }

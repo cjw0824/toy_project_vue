@@ -11,7 +11,7 @@ const SignUpModule = 'SignUpModule'
 
 export default {
     components: {
-        SignUpForm
+        SignUpForm,
     },
     methods: {
         ...mapActions(SignUpModule, ['requestSignUpToSpring']),
