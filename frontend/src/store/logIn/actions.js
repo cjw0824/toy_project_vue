@@ -12,6 +12,7 @@ export default {
         axiosInst.get("/authentication/naver/oauth-code?code=" + payload)
             .then((res) => {
                 console.log("token : " + res.data)
+                console.log("token : " + res.data.access_token)
                 //localStorage.setItem("userToken", res.data.userToken)
                 //localStorage.setItem("roleType", res.data.roleType)
                 //context.commit(LOGIN_COMPLETE, true)
