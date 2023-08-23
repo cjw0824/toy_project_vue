@@ -13,7 +13,13 @@ export default {
             .then((res) => {
                 console.log("token : " + res.data)
                 console.log("token : " + res.data.access_token)
-                //localStorage.setItem("userToken", res.data.userToken)
+
+                // this.$cookie.set("accesstoken", res.data.access_token);
+                // this.$cookie.set("refreshtoken", res.data.refresh_token);
+                // this.$cookie.set("role",);
+
+                localStorage.setItem("accesstoken", res.data.access_token)
+                localStorage.setItem("refreshtoken", res.data.refresh_token)
                 //localStorage.setItem("roleType", res.data.roleType)
                 //context.commit(LOGIN_COMPLETE, true)
                 //context.commit(SET_NICKNAME, res.data.nickname)
